@@ -1,0 +1,145 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(178, 232, 253);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    border-radius: 20px;
+    padding: 30px;
+    width: 50%;
+    max-width: 600px;
+    box-sizing: border-box;
+    background-color: rgb(115, 209, 246);
+    box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: green;
+    text-align: center;
+}
+
+.todo-input, .todo-date {
+    margin: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: green;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.addButton {
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(1, 150, 1);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: green;
+    transition: 0.4s;
+}
+
+.addedItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    border-bottom: 1.5px solid #8d8d8d;
+}
+
+.item-container {
+    flex: 2;
+    word-wrap: break-word;
+}
+
+.date-container {
+    flex: 1;
+    text-align: center;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12pt;
+    margin-right: 20px;
+    word-wrap: break-word;
+}
+
+.deleteButton {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: rgb(222, 5, 5);
+    transition: 0.4s;
+}
+
+/* Media Queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .addedItems {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-container, .date-container {
+        width: 100%;
+        text-align: left;
+    }
+
+    .deleteButton {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .addButton {
+        width: 100%;
+    }
+
+    .todo-input, .todo-date {
+        width: 100%;
+    }
+}
